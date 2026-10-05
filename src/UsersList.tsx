@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import UserCard from "./UserCard";
 import { fetchAllUsers } from "./api/fetchData"
 
+
  
 
 const UsersList = () => {
@@ -20,13 +21,16 @@ const {data, isLoading, isError, error } = useQuery({
   if (isError) {
     return <span>Error: {error.message} </span>
   }
+    if (!data) {
+    return <span>Inga användare hittades</span>
+  }
 
 
   return (
     <>
       <div>
         {data.map((user) => (
-          
+
           <UserCard key={user.id} user={user} ></UserCard>
           
         ))}

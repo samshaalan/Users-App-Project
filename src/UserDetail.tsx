@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { useNavigate, useParams } from "react-router"
+import { useParams } from "react-router"
 import { fetchAllUsers } from "./api/fetchData"
+
 
 
 const UserDetail = () => {
@@ -21,8 +22,11 @@ const UserDetail = () => {
   }
 
   // 1. Sök ut rätt användare ur arrayen baserat på ID[cite: 2]
-  const user = data.find((u) => u.id === Number(userId));
+  const user = data?.find((u) => u.id === Number(userId));
 
+  if (!user) {
+    return <span>Användaren hittades inte</span>
+  }
   
   return(
     <h2>
