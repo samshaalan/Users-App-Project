@@ -1,4 +1,11 @@
-const UserCard = ({ user }) => {
+import type { User } from './types.ts'
+
+interface UserCardProps{
+  user: User
+}
+
+const UserCard = ({ user }: UserCardProps) => {
+
 
   return(
     <div>

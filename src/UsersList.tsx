@@ -2,9 +2,8 @@
 import { useQuery } from "@tanstack/react-query";
 import UserCard from "./UserCard";
 import { fetchAllUsers } from "./api/fetchData"
+import { Link } from "react-router";
 
-
- 
 
 const UsersList = () => {
 
@@ -30,8 +29,12 @@ const {data, isLoading, isError, error } = useQuery({
     <>
       <div>
         {data.map((user) => (
+          <>
+            <UserCard key={user.id} user={user} ></UserCard>
+              <Link to={`/users/${user.id}`}>Visa detaljer</Link>
+          </>
+          
 
-          <UserCard key={user.id} user={user} ></UserCard>
           
         ))}
       </div>
