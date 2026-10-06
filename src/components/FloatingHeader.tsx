@@ -30,6 +30,16 @@ const FloatingHeader = () => {
             ">
               Users
           </Link>
+
+          <Link to="/roles" className="
+              bg-indigo-600 hover:bg-indigo-700
+              text-white font-bold
+              py-3 px-6 rounded-full
+              shadow-lg shadow-indigo-500/30
+              transition-all transform hover :- translate-y-1
+            ">
+              Roles
+          </Link>
           
           <div className='flex p-3 border  w-full rounded-full border-slate-100'> 
             <Search></Search>

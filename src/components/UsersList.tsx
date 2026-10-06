@@ -6,7 +6,7 @@ import { fetchAllUsers } from "../api/fetchData"
 
 const UsersList = () => {
 
-const {data, isLoading, isError, error } = useQuery({
+  const {data, isLoading, isError, error } = useQuery({
     queryKey:['users'],
     queryFn: fetchAllUsers, 
     staleTime: 1000 * 60 * 60,
@@ -20,7 +20,7 @@ const {data, isLoading, isError, error } = useQuery({
     return <span>Error: {error.message} </span>
   }
     if (!data) {
-    return <span>Inga användare hittades</span>
+    return <span>No users found</span>
   }
 
 

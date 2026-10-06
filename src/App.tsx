@@ -4,6 +4,7 @@ import Home from "./components/Home"
 import UserDetail from "./components/UserDetail"
 import Sidebar from "./components/Sidebar"
 import FloatingHeader from "./components/FloatingHeader"
+import Roles from "./components/Roles"
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/users" element={<UsersList />} />
             <Route path="/users/:userId" element={<UserDetail />} />
+            <Route path="/roles" element={<Roles />} />
           </Routes>
         </main>
       </div>
