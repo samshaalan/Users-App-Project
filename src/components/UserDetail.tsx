@@ -33,12 +33,12 @@ const UserDetail = () => {
     <div className="h-full w-full bg-slate-900 p-6 text-left text-slate-100">
 
       <button
-  type="button"
-  onClick={() => navigate(-1)}
-  className="mb-6 rounded bg-slate-700 px-4 py-2 text-white hover:bg-slate-600"
->
-  Tillbaka
-</button>
+        type="button"
+        onClick={() => navigate(-1)}
+        className="mb-6 rounded bg-slate-700 px-4 py-2 text-white hover:bg-slate-600"
+      >
+        Tillbaka
+      </button>
       
       <h1 className="text-2xl font-bold">{user.profile.name}</h1>
       <p className="text-slate-400">

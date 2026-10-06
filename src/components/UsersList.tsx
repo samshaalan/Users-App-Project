@@ -2,7 +2,6 @@
 import { useQuery } from "@tanstack/react-query";
 import UserCard from "./UserCard";
 import { fetchAllUsers } from "../api/fetchData"
-import { Link } from "react-router";
 
 
 const UsersList = () => {
